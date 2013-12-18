@@ -5,12 +5,12 @@
  * Time: 12:14
  */
 
-return [
+return array(
     'route' => 'auth.social',
 
-    'opauth' => [
+    'opauth' => array(
         'callback_transport' => 'post',
 
-        'Strategy' => []
-    ]
-];
+        'Strategy' => array()
+    )
+);
