@@ -41,9 +41,11 @@ class LaravelOpauthServiceProvider extends ServiceProvider {
 	{
         $this->app['opauth'] = $this->app->share(function ($app) {
             $config = $app['config']->get("laravel-opauth::opauth");
+			$path = parse_url(route($app['config']->get("laravel-opauth::route"), [null, null]), PHP_URL_PATH);
+			$path = rtrim($path, '/') . '/';
 
             $config['security_salt'] = $app['config']->get('app.key');
-            $config['path'] = substr(route($app['config']->get("laravel-opauth::route"), [null, null]), strlen(rtrim(URL::to('/'), '/') . '/'));
+            $config['path'] = $path;
 
             return new Opauth($config, false);
         });
