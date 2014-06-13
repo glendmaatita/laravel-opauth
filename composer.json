@@ -2,7 +2,7 @@
     "name": "socialism/laravel-opauth",
     "description": "Laravel 4.x Opauth package",
     "license": "MIT",
-    "version": "0.1.0",
+    "version": "0.1.3",
     "authors": [
         {
             "name": "Socialism",
