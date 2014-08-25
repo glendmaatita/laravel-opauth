@@ -4,7 +4,7 @@
 
 Add to your `composer.json` in `require` section following line:
 
-    "socialism/laravel-opauth": "dev-master"
+    "socialism/laravel-opauth": "0.1.*"
 
 And run `composer update`, after that add the following line at the and of `app/config/app.php` `providers` section:
 
